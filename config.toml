@@ -1,0 +1,4 @@
+baseURL = 'https://rconsulting.io/'
+languageCode = 'en-us'
+title = 'RConsulting'
+theme = 'papermod'
