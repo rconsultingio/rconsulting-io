@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
     - name: Archive artifact
       run: |
@@ -26,8 +26,8 @@ jobs:
 
   # Deploy job
   deploy:
-    runs-on: ubuntu
-    
+    runs-on: ubuntu-latest
+
     # Add a dependency to the build job
     needs: build
 
@@ -42,7 +42,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     # Specify runner + deployment step
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
