@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu
     steps:
     - name: Archive artifact
       run: |
@@ -25,6 +26,8 @@ jobs:
 
   # Deploy job
   deploy:
+    runs-on: ubuntu
+    
     # Add a dependency to the build job
     needs: build
 
